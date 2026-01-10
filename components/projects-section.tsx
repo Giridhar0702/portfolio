@@ -28,7 +28,7 @@ const projects = [
       "Responsive dashboard design",
     ],
     github: "https://github.com/Giridhar0702/Energy-Monitoring-System",
-    live: "https://energy-monitoring-system-ruby.vercel.app/dashboard",
+    live: "https://energy-monitoring-system-ruby.vercel.app/",
   },
 ]
 
