@@ -11,9 +11,7 @@ import {
   Wrench, 
   Search, 
   Sparkles, 
-  CheckCircle2,
-  Terminal,
-  Zap
+  CheckCircle2
 } from 'lucide-react';
 import { SKILL_CATEGORIES } from '@/data/portfolioData';
 
@@ -132,20 +130,20 @@ export const Skills: React.FC = () => {
                     {category!.title}
                   </h3>
                   <span className="text-xs font-mono text-blue-700 dark:text-cyan-400 bg-blue-50 dark:bg-cyan-950/60 border border-blue-200 dark:border-cyan-800/50 px-2.5 py-0.5 rounded-full font-medium">
-                    {category!.skills.length} items
+                    {category!.skills.length} skills
                   </span>
                 </div>
 
-                {/* Animated Skill Cards Grid */}
+                {/* Clean Professional Skill Cards Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                   {category!.skills.map((skill, index) => (
                     <motion.div
                       key={skill.name}
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      whileHover={{ y: -5 }}
-                      className="glass-card rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 flex flex-col justify-between group relative overflow-hidden shadow-sm"
+                      transition={{ duration: 0.3, delay: index * 0.04 }}
+                      whileHover={{ y: -4 }}
+                      className="glass-card rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 flex flex-col justify-between group relative overflow-hidden shadow-sm bg-white dark:bg-slate-900/70"
                     >
                       <div>
                         {/* Top Skill Row */}
@@ -162,26 +160,9 @@ export const Skills: React.FC = () => {
                         </div>
 
                         {/* Description */}
-                        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                        <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                           {skill.description}
                         </p>
-                      </div>
-
-                      {/* Proficiency Progress Bar */}
-                      <div>
-                        <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-1.5">
-                          <span>Proficiency</span>
-                          <span className="text-blue-600 dark:text-blue-400 font-bold">{skill.level}%</span>
-                        </div>
-                        <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-900 rounded-full overflow-hidden p-[1px] border border-slate-200 dark:border-slate-800">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1, ease: 'easeOut' }}
-                            className="h-full bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 dark:from-blue-500 dark:via-purple-500 dark:to-cyan-400 rounded-full"
-                          />
-                        </div>
                       </div>
                     </motion.div>
                   ))}
