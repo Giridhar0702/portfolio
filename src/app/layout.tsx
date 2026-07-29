@@ -70,7 +70,11 @@ export default function RootLayout({
   };
 
   return (
+<<<<<<< HEAD
     <html lang="en" className="light scroll-smooth">
+=======
+    <html lang="en" className="dark scroll-smooth">
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -83,7 +87,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
+<<<<<<< HEAD
       <body className="bg-slate-50 dark:bg-[#0B1120] text-slate-800 dark:text-slate-100 antialiased transition-colors duration-300">
+=======
+      <body className="bg-[#0B1120] text-slate-100 antialiased selection:bg-purple-600/40 selection:text-white">
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
         {children}
       </body>
     </html>

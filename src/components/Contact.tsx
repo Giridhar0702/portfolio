@@ -66,7 +66,11 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800/40 text-blue-700 dark:text-blue-400 text-xs font-mono mb-3"
+=======
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/50 border border-blue-800/40 text-blue-400 text-xs font-mono mb-3"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
           >
             <Mail className="w-3.5 h-3.5" />
             <span>Let's Connect</span>
@@ -77,11 +81,19 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
+<<<<<<< HEAD
             className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
           >
             Get In <span className="gradient-text">Touch</span>
           </motion.h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-purple-500 mx-auto mt-4 rounded-full" />
+=======
+            className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"
+          >
+            Get In <span className="gradient-text">Touch</span>
+          </motion.h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full" />
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -94,14 +106,22 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
             className="lg:col-span-5 space-y-6 flex flex-col justify-between"
           >
             <div>
+<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
                 Let's discuss <span className="gradient-text">opportunities</span>
               </h3>
               <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-8">
+=======
+              <h3 className="text-2xl font-bold text-white mb-3">
+                Let's discuss <span className="gradient-text">opportunities</span>
+              </h3>
+              <p className="text-slate-300 text-sm leading-relaxed mb-8">
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 I am actively seeking Java Developer, Generative AI, and RAG Software Engineer opportunities. Feel free to send a message, email, or call me directly.
               </p>
 
               {/* Email Quick Copy Box */}
+<<<<<<< HEAD
               <div className="glass-card rounded-2xl p-5 border border-slate-200 dark:border-slate-800 flex items-center justify-between mb-4 group shadow-sm bg-white dark:bg-slate-900/70">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-400">
@@ -112,6 +132,18 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     <a
                       href={`mailto:${PERSONAL_INFO.email}`}
                       className="text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+=======
+              <div className="glass-card rounded-2xl p-5 border border-slate-800 flex items-center justify-between mb-4 group">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-blue-950/80 border border-blue-800 text-blue-400">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-slate-400 block">Direct Email</span>
+                    <a
+                      href={`mailto:${PERSONAL_INFO.email}`}
+                      className="text-sm font-bold text-white hover:text-cyan-400 transition-colors"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     >
                       {PERSONAL_INFO.email}
                     </a>
@@ -119,14 +151,22 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                 </div>
                 <button
                   onClick={() => copyToClipboard(PERSONAL_INFO.email, 'email')}
+<<<<<<< HEAD
                   className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 transition-all shadow-sm"
                   title="Copy Email"
                 >
                   {copiedEmail ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
+=======
+                  className="p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all"
+                  title="Copy Email"
+                >
+                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 </button>
               </div>
 
               {/* Phone Quick Copy Box */}
+<<<<<<< HEAD
               <div className="glass-card rounded-2xl p-5 border border-slate-200 dark:border-slate-800 flex items-center justify-between mb-4 group shadow-sm bg-white dark:bg-slate-900/70">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-xl bg-indigo-50 dark:bg-purple-950/80 border border-indigo-200 dark:border-purple-800 text-indigo-700 dark:text-purple-400">
@@ -137,6 +177,18 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     <a
                       href={`tel:${PERSONAL_INFO.phone}`}
                       className="text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+=======
+              <div className="glass-card rounded-2xl p-5 border border-slate-800 flex items-center justify-between mb-4 group">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-purple-950/80 border border-purple-800 text-purple-400">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-slate-400 block">Phone Number</span>
+                    <a
+                      href={`tel:${PERSONAL_INFO.phone}`}
+                      className="text-sm font-bold text-white hover:text-cyan-400 transition-colors"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     >
                       {PERSONAL_INFO.formattedPhone} ({PERSONAL_INFO.phone})
                     </a>
@@ -144,10 +196,17 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                 </div>
                 <button
                   onClick={() => copyToClipboard(PERSONAL_INFO.phone, 'phone')}
+<<<<<<< HEAD
                   className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 transition-all shadow-sm"
                   title="Copy Phone"
                 >
                   {copiedPhone ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
+=======
+                  className="p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all"
+                  title="Copy Phone"
+                >
+                  {copiedPhone ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 </button>
               </div>
 
@@ -157,6 +216,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
                   className="glass-card rounded-2xl p-4 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-blue-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
                 >
                   <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400">
@@ -167,6 +227,18 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                       LinkedIn
                     </span>
                     <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block">Connect profile</span>
+=======
+                  className="glass-card rounded-2xl p-4 border border-slate-800 flex items-center gap-3 hover:border-blue-500/50 group"
+                >
+                  <div className="p-2.5 rounded-xl bg-blue-950 text-blue-400">
+                    <Linkedin className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-white group-hover:text-blue-400 transition-colors">
+                      LinkedIn
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400 block">Connect profile</span>
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   </div>
                 </a>
 
@@ -174,6 +246,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
                   className="glass-card rounded-2xl p-4 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-indigo-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
                 >
                   <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-purple-950 text-indigo-700 dark:text-purple-400">
@@ -184,12 +257,25 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                       GitHub
                     </span>
                     <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block">@Giridhar0702</span>
+=======
+                  className="glass-card rounded-2xl p-4 border border-slate-800 flex items-center gap-3 hover:border-purple-500/50 group"
+                >
+                  <div className="p-2.5 rounded-xl bg-purple-950 text-purple-400">
+                    <Github className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-white group-hover:text-purple-400 transition-colors">
+                      GitHub
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400 block">@Giridhar0702</span>
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   </div>
                 </a>
               </div>
             </div>
 
             {/* Resume Button inside Contact Info */}
+<<<<<<< HEAD
             <div className="p-5 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/60 dark:to-purple-950/60 border border-blue-200 dark:border-blue-800/40 flex items-center justify-between shadow-sm">
               <div>
                 <h4 className="text-sm font-bold text-slate-900 dark:text-white">Need a PDF Resume?</h4>
@@ -198,6 +284,16 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
               <button
                 onClick={openResumeModal}
                 className="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-600 dark:to-purple-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-1.5"
+=======
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-blue-950/60 to-purple-950/60 border border-blue-800/40 flex items-center justify-between">
+              <div>
+                <h4 className="text-sm font-bold text-white">Need a PDF Resume?</h4>
+                <p className="text-xs text-slate-400 font-mono">View or print Giridhar's complete CV</p>
+              </div>
+              <button
+                onClick={openResumeModal}
+                className="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-1.5"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               >
                 <FileText className="w-3.5 h-3.5" /> Download
               </button>
@@ -210,10 +306,17 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className="lg:col-span-7 glass-panel rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-2xl bg-white dark:bg-slate-900/70"
           >
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+=======
+            className="lg:col-span-7 glass-panel rounded-3xl p-8 border border-slate-800 shadow-2xl"
+          >
+            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <MessageSquare className="w-5 h-5 text-blue-400" />
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               Send a Direct Message
             </h3>
 
@@ -221,11 +324,19 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
                 className="p-8 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/80 text-center space-y-3"
               >
                 <CheckCircle2 className="w-12 h-12 text-emerald-600 dark:text-emerald-400 mx-auto animate-bounce" />
                 <h4 className="text-xl font-bold text-slate-900 dark:text-white">Message Sent Successfully!</h4>
                 <p className="text-xs text-slate-600 dark:text-slate-300 font-mono max-w-md mx-auto">
+=======
+                className="p-8 rounded-2xl bg-emerald-950/60 border border-emerald-800/80 text-center space-y-3"
+              >
+                <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto animate-bounce" />
+                <h4 className="text-xl font-bold text-white">Message Sent Successfully!</h4>
+                <p className="text-xs text-slate-300 font-mono max-w-md mx-auto">
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   Thank you for reaching out. Giridhar will respond to your inquiry via email promptly.
                 </p>
               </motion.div>
@@ -233,8 +344,13 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
+<<<<<<< HEAD
                     <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                       Your Name <span className="text-blue-600 dark:text-blue-400">*</span>
+=======
+                    <label className="block text-xs font-mono text-slate-300 mb-1.5">
+                      Your Name <span className="text-blue-400">*</span>
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     </label>
                     <input
                       type="text"
@@ -242,13 +358,22 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Recruiter Name"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
+=======
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-all"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     />
                   </div>
 
                   <div>
+<<<<<<< HEAD
                     <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                       Your Email <span className="text-blue-600 dark:text-blue-400">*</span>
+=======
+                    <label className="block text-xs font-mono text-slate-300 mb-1.5">
+                      Your Email <span className="text-blue-400">*</span>
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     </label>
                     <input
                       type="email"
@@ -256,13 +381,21 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="recruiter@company.com"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
+=======
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-all"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     />
                   </div>
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
+=======
+                  <label className="block text-xs font-mono text-slate-300 mb-1.5">
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     Subject
                   </label>
                   <input
@@ -270,13 +403,22 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="Java / AI Engineer Position Inquiry"
+<<<<<<< HEAD
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
+=======
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-all"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   />
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                     Message <span className="text-blue-600 dark:text-blue-400">*</span>
+=======
+                  <label className="block text-xs font-mono text-slate-300 mb-1.5">
+                    Message <span className="text-blue-400">*</span>
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   </label>
                   <textarea
                     rows={5}
@@ -284,14 +426,22 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Write your message or project opportunity details here..."
+<<<<<<< HEAD
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-xs placeholder:text-slate-400 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
+=======
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-all"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
+<<<<<<< HEAD
                   className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 dark:from-blue-600 dark:via-blue-500 dark:to-purple-600 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold text-xs shadow-md shadow-blue-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+=======
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-xs shadow-xl shadow-blue-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+>>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 >
                   {isSubmitting ? (
                     <span>Sending Message...</span>
