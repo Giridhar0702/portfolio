@@ -225,10 +225,19 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    id: "oracle-java-se-17",
+    title: "Oracle Certified Professional: Java SE 17 Developer",
+    issuer: "Oracle",
+    date: "2026",
+    verifyUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=F1BA2AD7037ECBDD7CC21ACE9A121B3964477C8A8919F8A2EBD0D8D987FC987C",
+    skillsVerified: ["Java SE 17", "Object-Oriented Design", "Streams & Lambdas", "JVM & Concurrency"],
+    icon: "Award"
+  },
+  {
     id: "prompt-eng-cert",
     title: "Prompt Engineering Certification",
     issuer: "Navigate Labs",
-    date: "2024",
+    date: "2026",
     skillsVerified: ["Prompt Engineering", "LLM Fine-Tuning", "System Design", "Few-Shot Prompting"],
     icon: "Award"
   },
@@ -236,7 +245,7 @@ export const CERTIFICATIONS: Certification[] = [
     id: "java-basic-cert",
     title: "Java (Basic) Skill Certification",
     issuer: "HackerRank",
-    date: "2024",
+    date: "2026",
     verifyUrl: "https://www.hackerrank.com/certificates/3505b25f061c",
     skillsVerified: ["Java Syntax", "Object-Oriented Design", "Exception Handling", "Data Types"],
     icon: "CheckCircle"

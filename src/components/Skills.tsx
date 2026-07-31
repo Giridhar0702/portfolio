@@ -152,11 +152,6 @@ export const Skills: React.FC = () => {
                             <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                             {skill.name}
                           </h4>
-                          {skill.tag && (
-                            <span className="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-indigo-50 dark:bg-purple-950/80 text-indigo-700 dark:text-purple-300 border border-indigo-200 dark:border-purple-800/60">
-                              {skill.tag}
-                            </span>
-                          )}
                         </div>
 
                         {/* Description */}

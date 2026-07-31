@@ -138,7 +138,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                       href={`tel:${PERSONAL_INFO.phone}`}
                       className="text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
                     >
-                      {PERSONAL_INFO.formattedPhone} ({PERSONAL_INFO.phone})
+                      {PERSONAL_INFO.formattedPhone}
                     </a>
                   </div>
                 </div>
