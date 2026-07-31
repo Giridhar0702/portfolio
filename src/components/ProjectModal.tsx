@@ -17,14 +17,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
     <AnimatePresence>
       <div 
         onClick={onClose}
-        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-900/60 dark:bg-black/80 backdrop-blur-md cursor-pointer"
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 pt-24 pb-8 overflow-y-auto bg-slate-950/90 dark:bg-black/95 backdrop-blur-xl cursor-pointer"
       >
         <motion.div
           onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative w-full max-w-3xl glass-panel rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden my-8 bg-white dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 cursor-default"
+          className="relative w-full max-w-3xl rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-auto bg-white dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 cursor-default"
         >
           {/* Top Modal Header Banner */}
           <div className="relative p-6 sm:p-8 bg-gradient-to-r from-blue-50 via-indigo-50 to-teal-50 dark:from-blue-950 dark:via-slate-900 dark:to-purple-950 border-b border-slate-200 dark:border-slate-800">
