@@ -15,12 +15,16 @@ export const BlogModal: React.FC<BlogModalProps> = ({ post, onClose }) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-900/60 dark:bg-black/85 backdrop-blur-md">
+      <div 
+        onClick={onClose}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-900/60 dark:bg-black/85 backdrop-blur-md cursor-pointer"
+      >
         <motion.div
+          onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.92, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.92, y: 20 }}
-          className="relative w-full max-w-3xl glass-panel rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden my-8 bg-white dark:bg-[#0B1120] text-slate-900 dark:text-slate-100"
+          className="relative w-full max-w-3xl glass-panel rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl overflow-hidden my-8 bg-white dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 cursor-default"
         >
           {/* Header Banner */}
           <div className="relative p-6 sm:p-8 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-purple-950 dark:to-blue-950 border-b border-slate-200 dark:border-slate-800">
