@@ -10,7 +10,6 @@ export const Footer: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <footer className="relative z-10 bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80 pt-12 pb-8 text-slate-600 dark:text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -21,18 +20,6 @@ export const Footer: React.FC = () => {
               Giridhar <span className="text-blue-600 dark:text-blue-500">S K</span>
             </a>
             <p className="text-slate-500 dark:text-slate-400 text-xs max-w-sm">
-=======
-    <footer className="relative z-10 bg-slate-950 border-t border-slate-800/80 pt-12 pb-8 text-slate-400 text-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
-          {/* Brand & Tagline */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <a href="#home" className="text-lg font-extrabold text-white mb-1">
-              Giridhar <span className="text-blue-500">S K</span>
-            </a>
-            <p className="text-slate-400 text-xs max-w-sm">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               {PERSONAL_INFO.tagline}
             </p>
           </div>
@@ -43,11 +30,7 @@ export const Footer: React.FC = () => {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
               className="p-2.5 rounded-xl bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-blue-500/40 transition-all shadow-sm"
-=======
-              className="p-2.5 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-blue-500/40 transition-all"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               title="GitHub"
             >
               <Github className="w-4 h-4" />
@@ -56,7 +39,6 @@ export const Footer: React.FC = () => {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
               className="p-2.5 rounded-xl bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-blue-500/40 transition-all shadow-sm"
               title="LinkedIn"
             >
@@ -68,47 +50,22 @@ export const Footer: React.FC = () => {
               title="Email"
             >
               <Mail className="w-4 h-4 text-teal-600 dark:text-cyan-400" />
-=======
-              className="p-2.5 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-blue-500/40 transition-all"
-              title="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4 text-blue-400" />
-            </a>
-            <a
-              href={`mailto:${PERSONAL_INFO.email}`}
-              className="p-2.5 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-blue-500/40 transition-all"
-              title="Email"
-            >
-              <Mail className="w-4 h-4 text-cyan-400" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
             </a>
           </div>
 
           {/* Back to Top Button */}
           <button
             onClick={scrollToTop}
-<<<<<<< HEAD
             className="p-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 transition-all flex items-center gap-1.5 shadow-sm"
             title="Back to top"
           >
             <span>Back to top</span>
             <ArrowUp className="w-4 h-4 text-blue-600 dark:text-cyan-400" />
-=======
-            className="p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-all flex items-center gap-1.5 shadow-md"
-            title="Back to top"
-          >
-            <span>Back to top</span>
-            <ArrowUp className="w-4 h-4 text-cyan-400" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
           </button>
         </div>
 
         {/* Copyright notice */}
-<<<<<<< HEAD
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-slate-500 dark:text-slate-400 text-center sm:text-left">
-=======
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-slate-400 text-center sm:text-left">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
           <div>
             © 2026 Giridhar S K. All rights reserved.
           </div>

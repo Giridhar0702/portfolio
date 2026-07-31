@@ -18,11 +18,7 @@ import { ScrollProgress } from '@/components/ScrollProgress';
 import { ResumeModal } from '@/components/ResumeModal';
 
 export default function Home() {
-<<<<<<< HEAD
   const [darkMode, setDarkMode] = useState(false);
-=======
-  const [darkMode, setDarkMode] = useState(true);
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   useEffect(() => {
@@ -36,11 +32,7 @@ export default function Home() {
   }, [darkMode]);
 
   return (
-<<<<<<< HEAD
     <main className="relative min-h-screen bg-slate-50 dark:bg-[#0B1120] text-slate-800 dark:text-slate-100 font-sans selection:bg-blue-500/20 dark:selection:bg-purple-600/40 overflow-x-hidden transition-colors duration-300">
-=======
-    <main className="relative min-h-screen bg-[#0B1120] text-slate-100 font-sans selection:bg-purple-600/40 overflow-x-hidden">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
       {/* Top Scroll Indicator */}
       <ScrollProgress />
 

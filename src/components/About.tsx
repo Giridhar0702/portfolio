@@ -18,19 +18,11 @@ import {
 import { PERSONAL_INFO } from '@/data/portfolioData';
 
 const highlightIcons: Record<string, React.ReactNode> = {
-<<<<<<< HEAD
   Coffee: <Coffee className="w-5 h-5 text-amber-600 dark:text-amber-400" />,
   Sparkles: <Sparkles className="w-5 h-5 text-indigo-600 dark:text-purple-400" />,
   Cpu: <Cpu className="w-5 h-5 text-blue-600 dark:text-cyan-400" />,
   Database: <Database className="w-5 h-5 text-teal-600 dark:text-blue-400" />,
   Zap: <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
-=======
-  Coffee: <Coffee className="w-5 h-5 text-amber-400" />,
-  Sparkles: <Sparkles className="w-5 h-5 text-purple-400" />,
-  Cpu: <Cpu className="w-5 h-5 text-cyan-400" />,
-  Database: <Database className="w-5 h-5 text-blue-400" />,
-  Zap: <Zap className="w-5 h-5 text-emerald-400" />,
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
 };
 
 const counterStats = [
@@ -51,11 +43,7 @@ export const About: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800/40 text-blue-700 dark:text-blue-400 text-xs font-mono mb-3"
-=======
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/50 border border-blue-800/40 text-blue-400 text-xs font-mono mb-3"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
           >
             <User className="w-3.5 h-3.5" />
             <span>Discover My Background</span>
@@ -66,19 +54,11 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-<<<<<<< HEAD
             className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
           >
             About <span className="gradient-text">Me</span>
           </motion.h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-purple-500 mx-auto mt-4 rounded-full" />
-=======
-            className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"
-          >
-            About <span className="gradient-text">Me</span>
-          </motion.h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
         </div>
 
         {/* Top Grid: Bio Paragraphs & Highlights */}
@@ -90,7 +70,6 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="lg:col-span-7 glass-panel rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-xl flex flex-col justify-between"
           >
             <div>
@@ -101,35 +80,15 @@ export const About: React.FC = () => {
                 "I am a Computer Science and Engineering undergraduate with strong knowledge of Java, Object-Oriented Programming, and backend development. I enjoy building AI-powered applications using Large Language Models, Retrieval-Augmented Generation (RAG), semantic search, and modern AI frameworks.
               </p>
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-base">
-=======
-            className="lg:col-span-7 glass-panel rounded-3xl p-8 border border-slate-800 shadow-xl flex flex-col justify-between"
-          >
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="gradient-text">AI Software Engineering</span> Aspirant
-              </h3>
-              <p className="text-slate-300 leading-relaxed mb-6 text-base">
-                "I am a Computer Science and Engineering undergraduate with strong knowledge of Java, Object-Oriented Programming, and backend development. I enjoy building AI-powered applications using Large Language Models, Retrieval-Augmented Generation (RAG), semantic search, and modern AI frameworks.
-              </p>
-              <p className="text-slate-300 leading-relaxed text-base">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 I continuously explore emerging AI technologies and enjoy solving real-world problems through scalable software solutions. My goal is to become an AI Software Engineer building intelligent applications that create real impact."
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-600 dark:text-slate-400">
               <span className="flex items-center gap-1.5 text-blue-700 dark:text-blue-400 font-medium">
                 <GraduationCap className="w-4 h-4" /> Bannari Amman Inst. of Tech (2023 - 2027)
               </span>
               <span className="flex items-center gap-1.5 text-teal-700 dark:text-cyan-400 font-medium">
-=======
-            <div className="mt-8 pt-6 border-t border-slate-800 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
-              <span className="flex items-center gap-1.5 text-blue-400">
-                <GraduationCap className="w-4 h-4" /> Bannari Amman Inst. of Tech (2023 - 2027)
-              </span>
-              <span className="flex items-center gap-1.5 text-cyan-400">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <CheckCircle className="w-4 h-4" /> B.E Computer Science & Engineering
               </span>
             </div>
@@ -150,7 +109,6 @@ export const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
                 className="glass-card rounded-2xl p-4 flex items-center gap-4 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 group cursor-default shadow-sm"
               >
                 <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 group-hover:scale-110 transition-transform">
@@ -161,18 +119,6 @@ export const About: React.FC = () => {
                     {highlight.title}
                   </h4>
                   <p className="text-xs text-slate-600 dark:text-slate-400 font-normal">
-=======
-                className="glass-card rounded-2xl p-4 flex items-center gap-4 hover:border-blue-500/50 group cursor-default"
-              >
-                <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 group-hover:scale-110 transition-transform">
-                  {highlightIcons[highlight.icon] || <Sparkles className="w-5 h-5 text-blue-400" />}
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-white group-hover:text-cyan-400 transition-colors">
-                    {highlight.title}
-                  </h4>
-                  <p className="text-xs text-slate-400 font-normal">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     {highlight.desc}
                   </p>
                 </div>
@@ -191,7 +137,6 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-<<<<<<< HEAD
               className="glass-panel rounded-2xl p-6 text-center border border-slate-200 dark:border-slate-800 hover:border-blue-500/40 transition-all shadow-sm"
             >
               <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-700 via-indigo-600 to-teal-600 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent mb-1">
@@ -199,15 +144,6 @@ export const About: React.FC = () => {
               </div>
               <div className="text-sm font-bold text-slate-900 dark:text-slate-200 mb-1">{stat.label}</div>
               <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400">{stat.subtext}</div>
-=======
-              className="glass-panel rounded-2xl p-6 text-center border border-slate-800 hover:border-purple-500/40 transition-all shadow-lg"
-            >
-              <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-1">
-                {stat.value}
-              </div>
-              <div className="text-sm font-bold text-slate-200 mb-1">{stat.label}</div>
-              <div className="text-[11px] font-mono text-slate-400">{stat.subtext}</div>
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
             </motion.div>
           ))}
         </div>
@@ -217,7 +153,6 @@ export const About: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-xl"
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
@@ -227,17 +162,6 @@ export const About: React.FC = () => {
                 GitHub Contribution & Code Activity
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
-=======
-          className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-            <div>
-              <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                <GitCommit className="w-5 h-5 text-blue-400" />
-                GitHub Contribution & Code Activity
-              </h3>
-              <p className="text-xs text-slate-400 font-mono mt-0.5">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 Active commits across Java, RAG Systems, & Open Source Projects
               </p>
             </div>
@@ -245,32 +169,19 @@ export const About: React.FC = () => {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< HEAD
               className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 text-xs font-mono text-blue-700 dark:text-cyan-400 hover:text-blue-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all w-fit font-medium"
-=======
-              className="px-4 py-2 rounded-xl bg-slate-900 text-xs font-mono text-cyan-400 hover:text-white border border-slate-800 hover:border-blue-500/50 transition-all w-fit"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
             >
               @Giridhar0702 on GitHub →
             </a>
           </div>
 
           {/* GitHub Activity Heatmap Grid Visualization */}
-<<<<<<< HEAD
           <div className="bg-slate-900 dark:bg-slate-950/80 rounded-2xl p-4 border border-slate-800 overflow-x-auto">
             <div className="flex items-center justify-between text-xs font-mono text-slate-300 dark:text-slate-400 mb-3 min-w-[500px]">
               <span>Jan - Jul 2026 Code Contributions</span>
               <div className="flex items-center gap-1.5 text-[10px]">
                 <span>Less</span>
                 <span className="w-2.5 h-2.5 rounded-sm bg-slate-800 border border-slate-700" />
-=======
-          <div className="bg-slate-950/80 rounded-2xl p-4 border border-slate-800/80 overflow-x-auto">
-            <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-3 min-w-[500px]">
-              <span>Jan - Jul 2026 Code Contributions</span>
-              <div className="flex items-center gap-1.5 text-[10px]">
-                <span>Less</span>
-                <span className="w-2.5 h-2.5 rounded-sm bg-slate-900 border border-slate-800" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <span className="w-2.5 h-2.5 rounded-sm bg-blue-900/60" />
                 <span className="w-2.5 h-2.5 rounded-sm bg-blue-600/80" />
                 <span className="w-2.5 h-2.5 rounded-sm bg-cyan-400" />
@@ -280,16 +191,9 @@ export const About: React.FC = () => {
 
             <div className="grid grid-flow-col grid-rows-7 gap-1.5 min-w-[650px] py-1">
               {Array.from({ length: 140 }).map((_, i) => {
-<<<<<<< HEAD
                 const intensity = (i * 7 + (i % 5) * 11) % 4;
                 const colors = [
                   'bg-slate-800/80 border border-slate-700/50',
-=======
-                // Generate a visually pleasing heatmap pattern
-                const intensity = (i * 7 + (i % 5) * 11) % 4;
-                const colors = [
-                  'bg-slate-900/80 border border-slate-800/50',
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   'bg-blue-950/80 border border-blue-900/40',
                   'bg-blue-600/70 border border-blue-500/50',
                   'bg-cyan-400 border border-cyan-300/80 shadow-[0_0_6px_rgba(6,182,212,0.4)]',

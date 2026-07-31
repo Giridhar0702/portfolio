@@ -11,30 +11,16 @@ import {
   Wrench, 
   Search, 
   Sparkles, 
-<<<<<<< HEAD
   CheckCircle2
-=======
-  CheckCircle2,
-  Terminal,
-  Zap
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
 } from 'lucide-react';
 import { SKILL_CATEGORIES } from '@/data/portfolioData';
 
 const iconMap: Record<string, React.ReactNode> = {
-<<<<<<< HEAD
   Code: <Code className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
   Brain: <Brain className="w-5 h-5 text-indigo-600 dark:text-purple-400" />,
   Server: <Server className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
   Globe: <Globe className="w-5 h-5 text-teal-600 dark:text-cyan-400" />,
   Wrench: <Wrench className="w-5 h-5 text-amber-600 dark:text-amber-400" />,
-=======
-  Code: <Code className="w-5 h-5 text-blue-400" />,
-  Brain: <Brain className="w-5 h-5 text-purple-400" />,
-  Server: <Server className="w-5 h-5 text-emerald-400" />,
-  Globe: <Globe className="w-5 h-5 text-cyan-400" />,
-  Wrench: <Wrench className="w-5 h-5 text-amber-400" />,
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
 };
 
 export const Skills: React.FC = () => {
@@ -72,11 +58,7 @@ export const Skills: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-purple-950/50 border border-indigo-200 dark:border-purple-800/40 text-indigo-700 dark:text-purple-400 text-xs font-mono mb-3"
-=======
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/50 border border-purple-800/40 text-purple-400 text-xs font-mono mb-3"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
           >
             <Cpu className="w-3.5 h-3.5" />
             <span>Technical Capabilities</span>
@@ -87,19 +69,11 @@ export const Skills: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-<<<<<<< HEAD
             className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
           >
             Skills & <span className="gradient-text">Technologies</span>
           </motion.h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-purple-500 mx-auto mt-4 rounded-full" />
-=======
-            className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"
-          >
-            Skills & <span className="gradient-text">Technologies</span>
-          </motion.h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
         </div>
 
         {/* Filter Tabs & Search Bar */}
@@ -112,19 +86,11 @@ export const Skills: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 ${
                   selectedCategory === cat
-<<<<<<< HEAD
                     ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-sm border border-blue-500/20'
                     : 'glass-panel text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700'
                 }`}
               >
                 {cat === 'All' && <Sparkles className="w-3.5 h-3.5 text-indigo-200 dark:text-cyan-300" />}
-=======
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/20 border border-blue-400/30'
-                    : 'glass-panel text-slate-300 hover:text-white hover:border-slate-700'
-                }`}
-              >
-                {cat === 'All' && <Sparkles className="w-3.5 h-3.5 text-cyan-300" />}
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 {cat}
               </button>
             ))}
@@ -138,11 +104,7 @@ export const Skills: React.FC = () => {
               placeholder="Search skill (e.g. RAG, FAISS, Java)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
               className="w-full pl-10 pr-4 py-2 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-200 text-xs placeholder:text-slate-400 focus:outline-none focus:border-blue-500 transition-all shadow-sm"
-=======
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-200 text-xs placeholder:text-slate-400 focus:outline-none focus:border-blue-500 transition-all"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
             />
           </div>
         </div>
@@ -160,7 +122,6 @@ export const Skills: React.FC = () => {
                 className="space-y-6"
               >
                 {/* Category Header */}
-<<<<<<< HEAD
                 <div className="flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
                   <div className="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
                     {iconMap[category!.iconName] || <Brain className="w-5 h-5 text-blue-600 dark:text-blue-400" />}
@@ -174,28 +135,12 @@ export const Skills: React.FC = () => {
                 </div>
 
                 {/* Clean Professional Skill Cards Grid */}
-=======
-                <div className="flex items-center gap-3 border-b border-slate-800 pb-3">
-                  <div className="p-2 rounded-xl bg-slate-900 border border-slate-800">
-                    {iconMap[category!.iconName] || <Brain className="w-5 h-5 text-blue-400" />}
-                  </div>
-                  <h3 className="text-xl font-bold text-white tracking-wide">
-                    {category!.title}
-                  </h3>
-                  <span className="text-xs font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-2.5 py-0.5 rounded-full">
-                    {category!.skills.length} items
-                  </span>
-                </div>
-
-                {/* Animated Skill Cards Grid */}
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                   {category!.skills.map((skill, index) => (
                     <motion.div
                       key={skill.name}
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
                       transition={{ duration: 0.3, delay: index * 0.04 }}
                       whileHover={{ y: -4 }}
                       className="glass-card rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 flex flex-col justify-between group relative overflow-hidden shadow-sm bg-white dark:bg-slate-900/70"
@@ -209,58 +154,16 @@ export const Skills: React.FC = () => {
                           </h4>
                           {skill.tag && (
                             <span className="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-indigo-50 dark:bg-purple-950/80 text-indigo-700 dark:text-purple-300 border border-indigo-200 dark:border-purple-800/60">
-=======
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      whileHover={{ y: -5 }}
-                      className="glass-card rounded-2xl p-5 border border-slate-800 hover:border-blue-500/50 flex flex-col justify-between group relative overflow-hidden"
-                    >
-                      {/* Ambient corner glow */}
-                      <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none" />
-
-                      <div>
-                        {/* Top Skill Row */}
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <h4 className="text-base font-bold text-white group-hover:text-cyan-400 transition-colors flex items-center gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                            {skill.name}
-                          </h4>
-                          {skill.tag && (
-                            <span className="px-2 py-0.5 text-[10px] font-mono font-semibold rounded bg-purple-950/80 text-purple-300 border border-purple-800/60">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                               {skill.tag}
                             </span>
                           )}
                         </div>
 
                         {/* Description */}
-<<<<<<< HEAD
                         <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                           {skill.description}
                         </p>
                       </div>
-=======
-                        <p className="text-xs text-slate-400 leading-relaxed mb-4">
-                          {skill.description}
-                        </p>
-                      </div>
-
-                      {/* Proficiency Progress Bar */}
-                      <div>
-                        <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1.5">
-                          <span>Proficiency</span>
-                          <span className="text-blue-400 font-bold">{skill.level}%</span>
-                        </div>
-                        <div className="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden p-[1px] border border-slate-800">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1, ease: 'easeOut' }}
-                            className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 rounded-full"
-                          />
-                        </div>
-                      </div>
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     </motion.div>
                   ))}
                 </div>

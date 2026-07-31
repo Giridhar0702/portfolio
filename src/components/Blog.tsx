@@ -19,11 +19,7 @@ export const Blog: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-purple-950/50 border border-indigo-200 dark:border-purple-800/40 text-indigo-700 dark:text-purple-400 text-xs font-mono mb-3"
-=======
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/50 border border-purple-800/40 text-purple-400 text-xs font-mono mb-3"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
           >
             <BookOpen className="w-3.5 h-3.5" />
             <span>Articles & AI Insights</span>
@@ -34,19 +30,11 @@ export const Blog: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-<<<<<<< HEAD
             className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
           >
             Technical <span className="gradient-text">Blog</span>
           </motion.h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-purple-500 mx-auto mt-4 rounded-full" />
-=======
-            className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"
-          >
-            Technical <span className="gradient-text">Blog</span>
-          </motion.h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
         </div>
 
         {/* Blog Cards Grid */}
@@ -59,7 +47,6 @@ export const Blog: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -6 }}
-<<<<<<< HEAD
               className="glass-card rounded-3xl p-6 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 flex flex-col justify-between group relative overflow-hidden shadow-sm dark:shadow-xl bg-white dark:bg-slate-900/70"
             >
               {/* Top Meta info */}
@@ -78,26 +65,6 @@ export const Blog: React.FC = () => {
                 </h3>
 
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6 line-clamp-3">
-=======
-              className="glass-card rounded-3xl p-6 border border-slate-800 hover:border-purple-500/50 flex flex-col justify-between group relative overflow-hidden shadow-xl"
-            >
-              {/* Top Meta info */}
-              <div>
-                <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-4">
-                  <span className="px-2.5 py-0.5 rounded-md bg-purple-950/80 text-purple-300 border border-purple-800/60">
-                    {post.category}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-cyan-400" /> {post.readTime}
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors leading-snug">
-                  {post.title}
-                </h3>
-
-                <p className="text-xs text-slate-300 leading-relaxed mb-6 line-clamp-3">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                   {post.excerpt}
                 </p>
               </div>
@@ -108,11 +75,7 @@ export const Blog: React.FC = () => {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-<<<<<<< HEAD
                       className="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 font-medium"
-=======
-                      className="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-900 text-slate-400 border border-slate-800"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     >
                       #{tag}
                     </span>
@@ -121,11 +84,7 @@ export const Blog: React.FC = () => {
 
                 <button
                   onClick={() => setSelectedPost(post)}
-<<<<<<< HEAD
                   className="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-semibold text-xs border border-slate-200 dark:border-slate-800 hover:border-indigo-500/40 transition-all flex items-center justify-center gap-2 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 group-hover:text-white group-hover:border-transparent shadow-sm"
-=======
-                  className="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs border border-slate-800 hover:border-purple-500/40 transition-all flex items-center justify-center gap-2 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:border-transparent"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 >
                   <span>Read Full Article</span>
                   <ArrowRight className="w-3.5 h-3.5" />

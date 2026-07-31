@@ -92,15 +92,9 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
       {/* Ambient background glow spheres */}
-<<<<<<< HEAD
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/10 dark:bg-purple-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-500/5 dark:bg-cyan-500/10 rounded-full blur-[150px] pointer-events-none" />
-=======
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[150px] pointer-events-none" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -113,27 +107,16 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
             className="lg:col-span-7 flex flex-col items-start"
           >
             {/* Status Pill Badge */}
-<<<<<<< HEAD
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 dark:bg-slate-900/80 border border-blue-200 dark:border-blue-500/30 text-blue-700 dark:text-cyan-400 text-xs font-mono mb-6 shadow-sm backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 dark:bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-cyan-500"></span>
-=======
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-blue-500/30 text-cyan-400 text-xs font-mono mb-6 shadow-lg backdrop-blur-md">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               </span>
               <span>Available for Software Engineering & AI Roles</span>
             </div>
 
             {/* Main Heading */}
-<<<<<<< HEAD
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
-=======
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               Hi, I'm{' '}
               <span className="gradient-text font-black">
                 {PERSONAL_INFO.name}
@@ -142,33 +125,19 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
 
             {/* Dynamic Animated Role Subheading */}
             <div className="h-10 sm:h-12 mb-6 flex items-center">
-<<<<<<< HEAD
               <span className="text-xl sm:text-2xl font-bold text-slate-700 dark:text-slate-300 font-mono flex items-center">
                 <span className="text-blue-600 dark:text-blue-400 mr-2">&gt;</span>
                 <span className="text-indigo-600 dark:text-purple-300">{displayedText}</span>
-=======
-              <span className="text-xl sm:text-2xl font-bold text-slate-300 font-mono flex items-center">
-                <span className="text-blue-400 mr-2">&gt;</span>
-                <span className="text-purple-300">{displayedText}</span>
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <span className="typing-cursor" />
               </span>
             </div>
 
             {/* Paragraph Subtitle */}
-<<<<<<< HEAD
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 font-normal">
               Computer Science Engineering undergraduate passionate about{' '}
               <strong className="text-blue-600 dark:text-blue-400 font-semibold">Java Development</strong>,{' '}
               <strong className="text-indigo-600 dark:text-purple-400 font-semibold">Generative AI</strong>, Large Language Models,{' '}
               <strong className="text-teal-600 dark:text-cyan-400 font-semibold">Retrieval-Augmented Generation (RAG)</strong>, and Backend Development.
-=======
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8 font-normal">
-              Computer Science Engineering undergraduate passionate about{' '}
-              <strong className="text-blue-400 font-semibold">Java Development</strong>,{' '}
-              <strong className="text-purple-400 font-semibold">Generative AI</strong>, Large Language Models,{' '}
-              <strong className="text-cyan-400 font-semibold">Retrieval-Augmented Generation (RAG)</strong>, and Backend Development.
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
             </p>
 
             {/* CTA Buttons */}
@@ -176,11 +145,7 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
               {/* View Projects */}
               <a
                 href="#projects"
-<<<<<<< HEAD
                 className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 dark:from-blue-600 dark:via-blue-500 dark:to-purple-600 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold text-sm shadow-md shadow-blue-500/20 transition-all duration-300 flex items-center justify-center gap-2 group border border-blue-500/20"
-=======
-                className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-sm shadow-xl shadow-blue-500/25 hover:shadow-purple-500/35 transition-all duration-300 flex items-center justify-center gap-2 group border border-blue-400/30"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -189,51 +154,30 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
               {/* Download Resume */}
               <button
                 onClick={openResumeModal}
-<<<<<<< HEAD
                 className="px-6 py-3.5 rounded-xl glass-panel text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-white hover:border-blue-400/50 font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 group shadow-sm"
               >
                 <FileText className="w-4 h-4 text-blue-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
-=======
-                className="px-6 py-3.5 rounded-xl glass-panel text-slate-200 hover:text-white hover:border-cyan-500/50 font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg"
-              >
-                <FileText className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <span>Download Resume</span>
               </button>
 
               {/* Contact Me */}
               <a
                 href="#contact"
-<<<<<<< HEAD
                 className="px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Mail className="w-4 h-4 text-indigo-600 dark:text-purple-400" />
-=======
-                className="px-6 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-semibold text-sm transition-all flex items-center justify-center gap-2"
-              >
-                <Mail className="w-4 h-4 text-purple-400" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <span>Contact Me</span>
               </a>
             </div>
 
             {/* Social & GitHub Links */}
-<<<<<<< HEAD
             <div className="flex items-center gap-5 pt-4 border-t border-slate-200 dark:border-slate-800/80 w-full">
               <span className="text-xs font-mono text-slate-500 dark:text-slate-400">Connect:</span>
-=======
-            <div className="flex items-center gap-5 pt-4 border-t border-slate-800/80 w-full">
-              <span className="text-xs font-mono text-slate-400">Connect:</span>
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               <a
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-<<<<<<< HEAD
                 className="p-2.5 rounded-xl bg-white dark:bg-slate-900/80 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 transition-all shadow-sm"
-=======
-                className="p-2.5 rounded-xl bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800 hover:border-blue-500/40 transition-all"
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 title="GitHub Profile"
               >
                 <Github className="w-4 h-4" />
@@ -242,7 +186,6 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-<<<<<<< HEAD
                 className="p-2.5 rounded-xl bg-white dark:bg-slate-900/80 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 transition-all shadow-sm"
                 title="LinkedIn Profile"
               >
@@ -254,19 +197,6 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
                 title="Email Giridhar"
               >
                 <Mail className="w-4 h-4 text-teal-600 dark:text-cyan-400" />
-=======
-                className="p-2.5 rounded-xl bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800 hover:border-blue-500/40 transition-all"
-                title="LinkedIn Profile"
-              >
-                <Linkedin className="w-4 h-4 text-blue-400" />
-              </a>
-              <a
-                href={`mailto:${PERSONAL_INFO.email}`}
-                className="p-2.5 rounded-xl bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800 hover:border-blue-500/40 transition-all"
-                title="Email Giridhar"
-              >
-                <Mail className="w-4 h-4 text-cyan-400" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
               </a>
             </div>
           </motion.div>
@@ -279,7 +209,6 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
             className="lg:col-span-5 flex flex-col gap-6"
           >
             {/* Glassmorphic Profile Card */}
-<<<<<<< HEAD
             <div className="relative rounded-3xl p-6 glass-panel border border-slate-200 dark:border-slate-800 shadow-lg overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
 
@@ -292,27 +221,12 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
                     </span>
                   </div>
                   <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-950 flex items-center justify-center shadow-sm">
-=======
-            <div className="relative rounded-3xl p-6 glass-panel border border-slate-800 shadow-2xl overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
-
-              <div className="flex items-center gap-5 mb-5">
-                {/* Profile Avatar Container */}
-                <div className="relative w-20 h-20 rounded-2xl p-[3px] bg-gradient-to-tr from-blue-500 via-purple-500 to-cyan-400 shadow-xl flex-shrink-0">
-                  <div className="w-full h-full bg-slate-950 rounded-[13px] flex items-center justify-center overflow-hidden">
-                    <span className="text-3xl font-black bg-gradient-to-tr from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                      GSK
-                    </span>
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-slate-950 flex items-center justify-center">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     <CheckCircle2 className="w-3 h-3 text-white" />
                   </div>
                 </div>
 
                 {/* Profile Details */}
                 <div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-wide">
                     {PERSONAL_INFO.name}
                   </h3>
@@ -321,23 +235,12 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
                   </p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 flex items-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-blue-600" />
-=======
-                  <h3 className="text-xl font-bold text-white tracking-wide">
-                    {PERSONAL_INFO.name}
-                  </h3>
-                  <p className="text-xs font-mono text-cyan-400 mb-1">
-                    B.E Computer Science & Engineering
-                  </p>
-                  <p className="text-xs text-slate-400 flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-blue-500" />
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     Bannari Amman Institute of Tech
                   </p>
                 </div>
               </div>
 
               {/* Quick Tech Badges */}
-<<<<<<< HEAD
               <div className="flex flex-wrap gap-2 pt-3 border-t border-slate-200 dark:border-slate-800">
                 <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/50 flex items-center gap-1 font-medium">
                   <Code2 className="w-3 h-3 text-blue-600 dark:text-blue-400" /> Core Java
@@ -350,43 +253,19 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
                 </span>
                 <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50 flex items-center gap-1 font-medium">
                   <Zap className="w-3 h-3 text-emerald-600 dark:text-emerald-400" /> Python & SQL
-=======
-              <div className="flex flex-wrap gap-2 pt-3 border-t border-slate-800">
-                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-blue-950/60 text-blue-300 border border-blue-800/50 flex items-center gap-1">
-                  <Code2 className="w-3 h-3 text-blue-400" /> Core Java
-                </span>
-                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-purple-950/60 text-purple-300 border border-purple-800/50 flex items-center gap-1">
-                  <Bot className="w-3 h-3 text-purple-400" /> RAG & LLMs
-                </span>
-                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-800/50 flex items-center gap-1">
-                  <Database className="w-3 h-3 text-cyan-400" /> FAISS Vector DB
-                </span>
-                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-800/50 flex items-center gap-1">
-                  <Zap className="w-3 h-3 text-emerald-400" /> Python & SQL
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 </span>
               </div>
             </div>
 
             {/* Live Interactive Code Terminal / AI Engine Simulator */}
-<<<<<<< HEAD
             <div className="rounded-2xl bg-slate-900 dark:bg-slate-950/90 border border-slate-700 dark:border-slate-800 shadow-xl overflow-hidden font-mono text-xs">
               {/* Terminal Titlebar */}
               <div className="bg-slate-950/90 dark:bg-slate-900/90 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
-=======
-            <div className="rounded-2xl bg-slate-950/90 border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs">
-              {/* Terminal Titlebar */}
-              <div className="bg-slate-900/90 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-rose-500/80" />
                   <div className="w-3 h-3 rounded-full bg-amber-500/80" />
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-<<<<<<< HEAD
                   <span className="text-slate-300 ml-2 text-[11px] flex items-center gap-1.5 font-medium">
-=======
-                  <span className="text-slate-400 ml-2 text-[11px] flex items-center gap-1.5">
->>>>>>> 17a2389de4f74c8b871733a1d870939a78d9bd57
                     <Terminal className="w-3.5 h-3.5 text-cyan-400" />
                     rag_engine_simulator.py
                   </span>
