@@ -21,7 +21,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     <AnimatePresence>
       <div 
         onClick={onClose}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-900/60 dark:bg-black/85 backdrop-blur-md cursor-pointer"
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-900/60 dark:bg-black/85 backdrop-blur-md cursor-pointer"
       >
         <motion.div
           onClick={(e) => e.stopPropagation()}
