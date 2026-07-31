@@ -11,8 +11,7 @@ import {
   ArrowRight,
   Code2,
   Cpu,
-  Layers,
-  Star
+  Layers
 } from 'lucide-react';
 import { PROJECTS, Project } from '@/data/portfolioData';
 import { ProjectModal } from './ProjectModal';
@@ -97,9 +96,6 @@ export const Projects: React.FC = () => {
                   <div className="relative z-10 flex items-center justify-between">
                     <span className="px-3 py-1 rounded-full text-[11px] font-mono bg-white/90 dark:bg-slate-900/90 text-blue-700 dark:text-cyan-400 border border-slate-200 dark:border-slate-700 shadow-sm font-semibold">
                       {project.category}
-                    </span>
-                    <span className="flex items-center gap-1 text-[11px] font-mono text-amber-700 dark:text-amber-400 bg-white/90 dark:bg-slate-900/80 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-800 font-semibold shadow-sm">
-                      <Star className="w-3 h-3 fill-amber-500 text-amber-500" /> {project.stars} stars
                     </span>
                   </div>
 

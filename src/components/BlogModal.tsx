@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Clock, Calendar, User, Tag, Sparkles, BookOpen } from 'lucide-react';
+import { X, Clock, Calendar, User, Tag, Sparkles, BookOpen, ExternalLink } from 'lucide-react';
 import { BlogPost } from '@/data/portfolioData';
 
 interface BlogModalProps {
@@ -82,13 +82,23 @@ export const BlogModal: React.FC<BlogModalProps> = ({ post, onClose }) => {
           </div>
 
           {/* Footer Action */}
-          <div className="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flex justify-end">
+          <div className="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flex items-center justify-end gap-3">
             <button
               onClick={onClose}
-              className="px-6 py-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all shadow-sm"
+              className="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all shadow-sm"
             >
-              Close Article
+              Close
             </button>
+            {post.linkedinUrl && (
+              <a
+                href={post.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-xs transition-all flex items-center gap-2 shadow-md"
+              >
+                <ExternalLink className="w-4 h-4" /> View Original LinkedIn Post
+              </a>
+            )}
           </div>
         </motion.div>
       </div>

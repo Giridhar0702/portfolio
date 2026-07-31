@@ -37,6 +37,7 @@ export interface BlogPost {
   category: string;
   tags: string[];
   author: string;
+  linkedinUrl?: string;
 }
 
 export interface Certification {
@@ -236,7 +237,7 @@ export const CERTIFICATIONS: Certification[] = [
     title: "Java (Basic) Skill Certification",
     issuer: "HackerRank",
     date: "2024",
-    verifyUrl: "https://www.hackerrank.com/certificates",
+    verifyUrl: "https://www.hackerrank.com/certificates/3505b25f061c",
     skillsVerified: ["Java Syntax", "Object-Oriented Design", "Exception Handling", "Data Types"],
     icon: "CheckCircle"
   }
@@ -244,127 +245,91 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    id: "understanding-rag",
-    title: "Understanding RAG: The Bridge Between Static LLMs and Live Data",
-    slug: "understanding-rag",
-    excerpt: "Retrieval-Augmented Generation (RAG) revolutionizes how AI retrieves factual information from external knowledge bases before generating responses.",
-    date: "July 2026",
-    readTime: "5 min read",
+    id: "langchain-generative-ai",
+    title: "LangChain & Generative AI: Building Production-Ready LLM Pipelines",
+    slug: "langchain-generative-ai",
+    excerpt: "An in-depth guide on utilizing LangChain to build resilient, stateful Retrieval-Augmented Generation workflows and autonomous LLM agents.",
+    date: "LinkedIn Article",
+    readTime: "4 min read",
     category: "Generative AI",
-    tags: ["RAG", "LLMs", "Vector DB", "FAISS"],
+    tags: ["LangChain", "GenerativeAI", "LLM", "RAG"],
     author: "Giridhar S K",
+    linkedinUrl: "https://www.linkedin.com/posts/giridhar-s-k-_langchain-generativeai-llm-ugcPost-7479561353150504961-l0t6/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyQdXMB1ftYswNIJrF8wdOQRK7fGBhMO7E",
     content: `
-### What is RAG?
-Retrieval-Augmented Generation (RAG) is an architectural pattern in modern Artificial Intelligence that enhances Large Language Models (LLMs) by connecting them to external, dynamic datasets.
+### Building Enterprise Generative AI Workflows with LangChain
 
-While standard LLMs rely solely on their pre-trained weights, RAG retrieves relevant facts from a custom knowledge base (like PDFs, DBs, or web pages) and feeds those facts as context into the prompt before generating an answer.
+Building production-ready LLM applications requires robust orchestration beyond simple API requests. LangChain provides a comprehensive framework to chain prompts, manage vector retrieval, and integrate tool execution into scalable pipelines.
 
-### Key Components of a RAG Pipeline:
-1. **Document Ingestion & Chunking**: Splitting raw documents into optimal text passages (e.g. 500 tokens with 50-token overlap).
-2. **Vector Embedding Generation**: Converting text chunks into dense mathematical vectors using models like SentenceTransformers.
-3. **Vector Storage & Retrieval**: Storing embeddings in vector databases (FAISS, Chroma, Pinecone) and querying using Cosine Similarity or L2 distance.
-4. **Prompt Augmentation & Generation**: Synthesizing a grounded response using LLMs with explicit context rules to eliminate hallucination.
-
-### Why RAG Matters for Engineers:
-RAG eliminates the immense cost of retraining LLMs while ensuring 100% data freshness, privacy control, and traceable citations for enterprise software.
+### Core Architecture Highlights:
+1. **Sequential & Routing Chains**: Managing complex multi-step reasoning pipelines.
+2. **Vector Indexing & Semantic Search**: Integrating high-dimensional vector stores for contextual precision.
+3. **Guardrails & Structured Parsing**: Enforcing output formatting and preventing model hallucinations.
     `
   },
   {
-    id: "prompt-engineering-basics",
-    title: "Prompt Engineering Basics: Unlocking Maximum Performance from LLMs",
-    slug: "prompt-engineering-basics",
-    excerpt: "Mastering the art of structuring instructions, role prompting, and chain-of-thought techniques to get deterministic AI outputs.",
-    date: "June 2026",
+    id: "ai-agents-autonomous-workflows",
+    title: "Autonomous AI Agents: The Next Evolution in Artificial Intelligence",
+    slug: "ai-agents-autonomous-workflows",
+    excerpt: "Exploring agentic AI patterns, tool execution, multi-agent collaboration, and how autonomous agents plan and execute complex tasks.",
+    date: "LinkedIn Article",
+    readTime: "5 min read",
+    category: "AI Agents",
+    tags: ["AIAgents", "ArtificialIntelligence", "AgenticAI", "LLM"],
+    author: "Giridhar S K",
+    linkedinUrl: "https://www.linkedin.com/posts/giridhar-s-k-_ai-aiagents-artificialintelligence-ugcPost-7439334484937854977-Iv7U/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyQdXMB1ftYswNIJrF8wdOQRK7fGBhMO7E",
+    content: `
+### The Rise of Autonomous Agentic Workflows
+
+AI Agents transition language models from passive conversational assistants into active problem solvers capable of autonomous planning and tool invocation.
+
+### Key Pillars of Agentic Design:
+- **ReAct (Reason + Act)**: Interleaving reasoning steps with real-world tool execution.
+- **Stateful Memory & Context**: Retaining conversation history across complex sub-goals.
+- **Multi-Agent Orchestration**: Delegating specialized tasks across focused subagent workers.
+    `
+  },
+  {
+    id: "mastering-prompt-engineering",
+    title: "Mastering Prompt Engineering: Crafting High-Precision AI Instructions",
+    slug: "mastering-prompt-engineering",
+    excerpt: "Practical prompt design strategies including system personas, few-shot learning, XML delimiters, and structured output formatting.",
+    date: "LinkedIn Article",
     readTime: "4 min read",
     category: "Prompt Engineering",
-    tags: ["Prompts", "LLM", "AI Engineering"],
+    tags: ["PromptEngineering", "LLM", "GenerativeAI", "AI"],
     author: "Giridhar S K",
+    linkedinUrl: "https://www.linkedin.com/posts/giridhar-s-k-_promptblog-ugcPost-7437087782377857024-eeuv/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyQdXMB1ftYswNIJrF8wdOQRK7fGBhMO7E",
     content: `
-### The Science of Prompting
-Prompt Engineering is more than writing text; it is the discipline of structuring inputs so that language models produce accurate, formatted, and reliable answers.
+### The Engineering Behind Effective Prompts
 
-### Essential Prompting Strategies:
-- **Role Assignment**: Define the persona (e.g. *"You are a Principal Java Architect..."*).
-- **Few-Shot Examples**: Provide 2-3 input-output pairs to guide format compliance.
-- **Chain-of-Thought (CoT)**: Force the model to show step-by-step reasoning (*"Think step-by-step before answering..."*).
-- **Delimiters & Guardrails**: Use XML tags or Markdown triples to isolate untrusted user inputs.
+Prompt Engineering is the discipline of structuring inputs to ensure Large Language Models produce accurate, structured, and reliable responses consistently.
+
+### Key Techniques:
+- **System Persona Definition**: Defining clear operational scope and domain expertise.
+- **Few-Shot Formatting**: Providing concrete input-output pairs to mandate desired response schemas.
+- **Chain-of-Thought Prompting**: Forcing explicit step-by-step reasoning before output generation.
     `
   },
   {
-    id: "what-are-llms",
-    title: "What are LLMs? Understanding the Transformer Architecture",
-    slug: "what-are-llms",
-    excerpt: "A deep dive into Large Language Models, self-attention mechanisms, tokenization, and how AI understands human language.",
-    date: "May 2026",
+    id: "transformers-and-deep-learning",
+    title: "Understanding Transformers & Machine Learning Fundamentals",
+    slug: "transformers-and-deep-learning",
+    excerpt: "A deep dive into self-attention mechanisms, neural network architectures, and the foundation of modern Machine Learning.",
+    date: "LinkedIn Article",
     readTime: "6 min read",
-    category: "Artificial Intelligence",
-    tags: ["LLM", "Transformers", "NLP", "AI"],
-    author: "Giridhar S K",
-    content: `
-### Demystifying Transformers
-At the heart of ChatGPT, Claude, and Llama lies the **Transformer Architecture**, introduced by Vaswani et al. in "Attention Is All You Need".
-
-### Core Concepts:
-- **Tokenization**: Converting words/subwords into numerical token IDs.
-- **Self-Attention**: Allowing every token in a sequence to weigh the importance of all other tokens in context.
-- **Next-Token Prediction**: Estimating the statistical probability distribution over vocabulary tokens to generate coherent sentences.
-    `
-  },
-  {
-    id: "semantic-search-explained",
-    title: "Semantic Search Explained: Moving Beyond Simple Keyword Matches",
-    slug: "semantic-search-explained",
-    excerpt: "Discover how vector search captures conceptual meaning, synonyms, and context where traditional keyword search falls short.",
-    date: "April 2026",
-    readTime: "4 min read",
-    category: "Information Retrieval",
-    tags: ["Vector Search", "Embeddings", "FAISS", "Python"],
-    author: "Giridhar S K",
-    content: `
-### Why Keyword Search Fails
-Traditional SQL \`LIKE\` or BM25 keyword matching fails when a user searches for *"vehicle maintenance"* but the document says *"car repair"*.
-
-### Enter Semantic Search
-Semantic Search converts both queries and documents into dense high-dimensional vectors. In vector space, *"car repair"* and *"vehicle maintenance"* sit close to each other. Using distance metrics like Cosine Similarity, search engines return relevant results regardless of exact word overlap.
-    `
-  },
-  {
-    id: "embeddings-in-ai",
-    title: "Embeddings in AI: Turning Concepts into High-Dimensional Vectors",
-    slug: "embeddings-in-ai",
-    excerpt: "How floating-point vector representations enable neural networks to compute semantic distance between words, images, and documents.",
-    date: "March 2026",
-    readTime: "5 min read",
     category: "Machine Learning",
-    tags: ["Embeddings", "Math", "AI", "Python"],
+    tags: ["ArtificialIntelligence", "Transformers", "MachineLearning", "DeepLearning"],
     author: "Giridhar S K",
+    linkedinUrl: "https://www.linkedin.com/posts/giridhar-s-k-_artificialintelligence-transformers-machinelearning-ugcPost-7410553888866631680-mJsv/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyQdXMB1ftYswNIJrF8wdOQRK7fGBhMO7E",
     content: `
-### What is an Embedding?
-An embedding is a representation of an object (like a word, sentence, image, or audio snippet) as a vector of floating-point numbers in a continuous vector space (e.g. 768 or 1536 dimensions).
+### Demystifying the Transformer Architecture
 
-### Geometric Meaning:
-- **Dot Product & Cosine Distance**: Measures the angle between two vectors. A cosine similarity of ~1.0 means identical concept meaning.
-- **Applications**: Recommendation engines, document similarity, clustering, and vector search indices.
-    `
-  },
-  {
-    id: "building-ai-applications",
-    title: "Building AI Applications: Combining Java, Python, and LLM APIs",
-    slug: "building-ai-applications",
-    excerpt: "Best practices for architecting hybrid AI applications utilizing Java backend robustness alongside Python AI ecosystem pipelines.",
-    date: "February 2026",
-    readTime: "5 min read",
-    category: "Software Engineering",
-    tags: ["Java", "Python", "System Design", "Architecture"],
-    author: "Giridhar S K",
-    content: `
-### The Hybrid Stack: Java + Python
-In production environments, Java provides rock-solid backend services, transaction safety, and enterprise concurrency, while Python powers the AI/ML ecosystem.
+The Transformer architecture powers state-of-the-art AI by leveraging self-attention mechanisms to model relationships between sequences in parallel.
 
-### Architectural Best Practices:
-1. **REST / gRPC Microservices**: Run Python vector search microservices behind Java Spring Boot / Core Java API Gateways.
-2. **Asynchronous Task Queues**: Handle long-running LLM generation tasks asynchronously to keep user interfaces responsive.
-3. **Robust Fallbacks**: Implement retry mechanisms and rate limiting when calling external LLM endpoints.
+### Architectural Foundations:
+1. **Self-Attention Mechanism**: Quantifying token dependencies across entire context windows.
+2. **Positional Encodings**: Injecting sequence order without recursive bottlenecking.
+3. **Scalable Pre-Training**: Foundation model training across high-volume text corpora.
     `
   }
 ];

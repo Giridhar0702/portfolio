@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Clock, Calendar, ArrowRight, Sparkles, User } from 'lucide-react';
+import { BookOpen, Clock, Calendar, ArrowRight, Sparkles, User, ExternalLink } from 'lucide-react';
 import { BLOG_POSTS, BlogPost } from '@/data/portfolioData';
 import { BlogModal } from './BlogModal';
 
@@ -22,7 +22,7 @@ export const Blog: React.FC = () => {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-purple-950/50 border border-indigo-200 dark:border-purple-800/40 text-indigo-700 dark:text-purple-400 text-xs font-mono mb-3"
           >
             <BookOpen className="w-3.5 h-3.5" />
-            <span>Articles & AI Insights</span>
+            <span>LinkedIn Articles & AI Insights</span>
           </motion.div>
 
           <motion.h2
@@ -38,7 +38,7 @@ export const Blog: React.FC = () => {
         </div>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {BLOG_POSTS.map((post, index) => (
             <motion.div
               key={post.id}
@@ -82,13 +82,27 @@ export const Blog: React.FC = () => {
                   ))}
                 </div>
 
-                <button
-                  onClick={() => setSelectedPost(post)}
-                  className="w-full py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-semibold text-xs border border-slate-200 dark:border-slate-800 hover:border-indigo-500/40 transition-all flex items-center justify-center gap-2 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 group-hover:text-white group-hover:border-transparent shadow-sm"
-                >
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setSelectedPost(post)}
+                    className="flex-1 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-semibold text-xs border border-slate-200 dark:border-slate-800 transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                  >
+                    <span>Overview</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+
+                  {post.linkedinUrl && (
+                    <a
+                      href={post.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>LinkedIn Post</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
