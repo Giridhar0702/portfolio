@@ -56,6 +56,7 @@ export const PERSONAL_INFO = {
   title: "Computer Science Engineering Student | Java Developer | Generative AI Engineer",
   tagline: "Building AI-powered applications with LLMs, RAG, and Java.",
   email: "giridharsaravanakumar07@gmail.com",
+  emailServiceId: "service_pm091xp",
   phone: "9360772070",
   formattedPhone: "+91 93607 72070",
   github: "https://github.com/Giridhar0702",

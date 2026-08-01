@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react'; // Added useRef for form referencing
+import emailjs from '@emailjs/browser'; // Requirement 1 & 2: Imported EmailJS browser SDK
 import { motion } from 'framer-motion';
 import { 
   Mail, 
@@ -9,6 +10,7 @@ import {
   Github, 
   Send, 
   CheckCircle2, 
+  AlertCircle, // Added AlertCircle icon for error message display
   Copy, 
   Check, 
   FileText, 
@@ -30,19 +32,60 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(''); // Added state to track & display submission error messages
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Requirement 3: Created formRef to pass the HTML form DOM element to emailjs.sendForm()
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Requirement 3 & 4: sendEmail handler using emailjs.sendForm() and attached via onSubmit
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(''); // Reset previous error state
 
-    setTimeout(() => {
+    // Requirement 9 & 10: Access EmailJS credentials from Next.js environment variables
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+
+    try {
+      // Validate environment variables existence
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS environment variables are missing. Please configure .env.local');
+      }
+
+      // Requirement 3: Send email using emailjs.sendForm()
+      if (formRef.current) {
+        await emailjs.sendForm(
+          serviceId,
+          templateId,
+          formRef.current,
+          publicKey
+        );
+      }
+
       setIsSubmitting(false);
+      // Requirement 6: Set success state to display success message
       setIsSubmitted(true);
+      
+      // Requirement 8: Reset form state and form DOM element after successful submission
       setFormData({ name: '', email: '', subject: '', message: '' });
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+
+      // Hide success message automatically after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1200);
+    } catch (error: any) {
+      console.error('Failed to send email via EmailJS:', error);
+      setIsSubmitting(false);
+      // Requirement 7: Display error message on failure
+      setErrorMessage(
+        error?.text || error?.message || 'Failed to send email. Please check your EmailJS setup or try again later.'
+      );
+    }
   };
 
   const copyToClipboard = (text: string, type: 'email' | 'phone') => {
@@ -217,6 +260,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
               Send a Direct Message
             </h3>
 
+            {/* Requirement 6: Display success message when sent successfully */}
             {isSubmitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -230,14 +274,25 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              /* Requirement 4: Connected sendEmail function using onSubmit and attached formRef */
+              <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+                {/* Requirement 7: Display error message banner if sending fails */}
+                {errorMessage && (
+                  <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/60 border border-red-200 dark:border-red-800/80 flex items-center gap-3 text-red-700 dark:text-red-400 text-xs font-mono">
+                    <AlertCircle className="w-5 h-5 shrink-0 text-red-500" />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                       Your Name <span className="text-blue-600 dark:text-blue-400">*</span>
                     </label>
+                    {/* Requirement 5: Added name="name" (and name="from_name") for EmailJS field mapping */}
                     <input
                       type="text"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -250,8 +305,10 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                       Your Email <span className="text-blue-600 dark:text-blue-400">*</span>
                     </label>
+                    {/* Requirement 5: Added name="email" (and name="from_email") for EmailJS field mapping */}
                     <input
                       type="email"
+                      name="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -265,8 +322,10 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                   <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                     Subject
                   </label>
+                  {/* Requirement 5: Added name="subject" for EmailJS field mapping */}
                   <input
                     type="text"
+                    name="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="Java / AI Engineer Position Inquiry"
@@ -278,8 +337,10 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                   <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-medium">
                     Message <span className="text-blue-600 dark:text-blue-400">*</span>
                   </label>
+                  {/* Requirement 5: Added name="message" for EmailJS field mapping */}
                   <textarea
                     rows={5}
+                    name="message"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
