@@ -53,6 +53,7 @@ export interface Certification {
 
 export const PERSONAL_INFO = {
   name: "Giridhar S K",
+  avatar: "/profile.jpg",
   title: "Computer Science Engineering Student | Java Developer | Generative AI Engineer",
   tagline: "Building AI-powered applications with LLMs, RAG, and Java.",
   email: "giridharsaravanakumar07@gmail.com",

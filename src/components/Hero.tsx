@@ -214,13 +214,15 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
 
               <div className="flex items-center gap-5 mb-5">
                 {/* Profile Avatar Container */}
-                <div className="relative w-20 h-20 rounded-2xl p-[3px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-teal-500 dark:from-blue-500 dark:via-purple-500 dark:to-cyan-400 shadow-md flex-shrink-0">
-                  <div className="w-full h-full bg-slate-900 dark:bg-slate-950 rounded-[13px] flex items-center justify-center overflow-hidden">
-                    <span className="text-3xl font-black bg-gradient-to-tr from-blue-400 to-indigo-300 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                      GSK
-                    </span>
+                <div className="relative w-22 h-22 rounded-2xl p-[3px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-teal-500 dark:from-blue-500 dark:via-purple-500 dark:to-cyan-400 shadow-md flex-shrink-0">
+                  <div className="w-full h-full bg-slate-900 dark:bg-slate-950 rounded-[13px] overflow-hidden flex items-center justify-center relative">
+                    <img 
+                      src={PERSONAL_INFO.avatar} 
+                      alt={PERSONAL_INFO.name} 
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" 
+                    />
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-950 flex items-center justify-center shadow-sm">
+                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-950 flex items-center justify-center shadow-sm" title="Active">
                     <CheckCircle2 className="w-3 h-3 text-white" />
                   </div>
                 </div>
