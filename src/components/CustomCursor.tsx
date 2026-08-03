@@ -47,8 +47,8 @@ export const CustomCursor: React.FC = () => {
     let animationFrame: number;
     const follow = () => {
       setTrailingPos((prev) => ({
-        x: prev.x + (position.x - prev.x) * 0.15,
-        y: prev.y + (position.y - prev.y) * 0.15,
+        x: prev.x + (position.x - prev.x) * 0.5,
+        y: prev.y + (position.y - prev.y) * 0.5,
       }));
       animationFrame = requestAnimationFrame(follow);
     };
@@ -73,7 +73,7 @@ export const CustomCursor: React.FC = () => {
       />
       {/* Trailing halo ring */}
       <div
-        className={`fixed pointer-events-none z-50 rounded-full border border-blue-400/50 backdrop-blur-[1px] transition-all duration-300 ${
+        className={`fixed pointer-events-none z-50 rounded-full border border-blue-400/50 backdrop-blur-[1px] transition-all duration-100 ${
           isHovered
             ? 'scale-150 bg-blue-500/10 border-purple-400 border-2'
             : 'scale-100 bg-transparent'

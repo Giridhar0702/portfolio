@@ -213,17 +213,26 @@ export const Hero: React.FC<HeroProps> = ({ openResumeModal }) => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
 
               <div className="flex items-center gap-5 mb-5">
-                {/* Profile Avatar Container */}
-                <div className="relative w-22 h-22 rounded-2xl p-[3px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-teal-500 dark:from-blue-500 dark:via-purple-500 dark:to-cyan-400 shadow-md flex-shrink-0">
-                  <div className="w-full h-full bg-slate-900 dark:bg-slate-950 rounded-[13px] overflow-hidden flex items-center justify-center relative">
+                {/* Minimal Profile Avatar */}
+                <div className="relative w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-teal-500 dark:from-blue-500 dark:via-purple-500 dark:to-cyan-400 shadow-sm flex-shrink-0">
+                  <div className="w-full h-full bg-slate-900 dark:bg-slate-950 rounded-full overflow-hidden flex items-center justify-center relative">
                     <img 
                       src={PERSONAL_INFO.avatar} 
                       alt={PERSONAL_INFO.name} 
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" 
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('.jpeg')) {
+                          target.src = '/profile.jpg';
+                        } else if (target.src.includes('.jpg')) {
+                          target.src = '/profile.png';
+                        }
+                      }}
+                      style={{ objectPosition: '50% 25%' }}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" 
                     />
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-950 flex items-center justify-center shadow-sm" title="Active">
-                    <CheckCircle2 className="w-3 h-3 text-white" />
+                  <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-950 flex items-center justify-center shadow-sm" title="Active">
+                    <CheckCircle2 className="w-2 h-2 text-white" />
                   </div>
                 </div>
 

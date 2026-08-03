@@ -14,7 +14,7 @@ import {
   CheckCircle,
   GraduationCap
 } from 'lucide-react';
-import { PERSONAL_INFO } from '@/data/portfolioData';
+import { PERSONAL_INFO, SKILL_CATEGORIES, CERTIFICATIONS } from '@/data/portfolioData';
 
 const highlightIcons: Record<string, React.ReactNode> = {
   Coffee: <Coffee className="w-5 h-5 text-amber-600 dark:text-amber-400" />,
@@ -24,11 +24,14 @@ const highlightIcons: Record<string, React.ReactNode> = {
   Zap: <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
 };
 
+const totalSkillsCount = SKILL_CATEGORIES.reduce((acc, cat) => acc + cat.skills.length, 0);
+const certsCount = CERTIFICATIONS.length;
+
 const counterStats = [
   { label: 'CGPA Score', value: '7.75', subtext: 'Bannari Amman Inst. of Tech' },
   { label: 'Featured Projects', value: '3+', subtext: 'Multimodal RAG & Java Applications' },
-  { label: 'AI & CS Skills', value: '25+', subtext: 'Java, Python, FAISS, LLMs' },
-  { label: 'Certifications', value: '2', subtext: 'HackerRank Java & Navigate Labs' },
+  { label: 'AI & CS Skills', value: `${totalSkillsCount}+`, subtext: 'Java, Python, FAISS, LLMs' },
+  { label: 'Certifications', value: `${certsCount}`, subtext: 'Oracle, HackerRank & Navigate Labs' },
 ];
 
 export const About: React.FC = () => {
@@ -78,7 +81,16 @@ export const About: React.FC = () => {
                 <img 
                   src={PERSONAL_INFO.avatar} 
                   alt={PERSONAL_INFO.name} 
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" 
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src.includes('.jpeg')) {
+                      target.src = '/profile.jpg';
+                    } else if (target.src.includes('.jpg')) {
+                      target.src = '/profile.png';
+                    }
+                  }}
+                  style={{ objectPosition: '50% 25%' }}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                 />
               </div>
             </div>

@@ -209,7 +209,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       LinkedIn
                     </span>
-                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block">Connect profile</span>
+                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block">Connect </span>
                   </div>
                 </a>
 
