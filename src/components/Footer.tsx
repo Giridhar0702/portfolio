@@ -45,6 +45,17 @@ export const Footer: React.FC = () => {
               <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             </a>
             <a
+              href={PERSONAL_INFO.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl bg-white dark:bg-slate-900 text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300 border border-slate-200 dark:border-slate-800 hover:border-amber-500/40 transition-all shadow-sm"
+              title="LeetCode"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a4.994 4.994 0 0 0-3.85-1.472c-1.387 0-2.697.553-3.67 1.526l-4.319 4.381A5.153 5.153 0 0 0 2.213 14.3c0 1.387.553 2.697 1.526 3.67l4.332 4.363c.973.973 2.283 1.526 3.67 1.526s2.697-.553 3.67-1.526l2.609-2.607c.514-.514.496-1.365-.039-1.901-.535-.535-1.386-.552-1.9-.038zM20.811 13.01H10.666c-.702 0-1.27.568-1.27 1.27s.568 1.27 1.27 1.27h10.145c.702 0 1.27-.568 1.27-1.27s-.568-1.27-1.27-1.27z"/>
+              </svg>
+            </a>
+            <a
               href={`mailto:${PERSONAL_INFO.email}`}
               className="p-2.5 rounded-xl bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-blue-500/40 transition-all shadow-sm"
               title="Email"

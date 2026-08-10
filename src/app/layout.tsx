@@ -65,6 +65,7 @@ export default function RootLayout({
     sameAs: [
       'https://github.com/Giridhar0702',
       'https://linkedin.com/in/giridhar-s-k-',
+      'https://leetcode.com/u/giridharsaravanakumar07/',
     ],
     email: 'mailto:giridharsaravanakumar07@gmail.com',
   };

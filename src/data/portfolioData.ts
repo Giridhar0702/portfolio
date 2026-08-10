@@ -62,6 +62,7 @@ export const PERSONAL_INFO = {
   formattedPhone: "+91 93607 72070",
   github: "https://github.com/Giridhar0702",
   linkedin: "https://linkedin.com/in/giridhar-s-k-",
+  leetcode: "https://leetcode.com/u/giridharsaravanakumar07/",
   location: "Tamil Nadu, India",
   college: "Bannari Amman Institute of Technology",
   degree: "B.E Computer Science and Engineering",

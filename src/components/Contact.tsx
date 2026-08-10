@@ -195,12 +195,12 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
               </div>
 
               {/* Social Links Cards */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
                 <a
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card rounded-2xl p-4 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-blue-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
+                  className="glass-card rounded-2xl p-3.5 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-blue-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
                 >
                   <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400">
                     <Linkedin className="w-4 h-4" />
@@ -209,7 +209,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       LinkedIn
                     </span>
-                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block">Connect </span>
+                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block truncate">Connect</span>
                   </div>
                 </a>
 
@@ -217,7 +217,7 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card rounded-2xl p-4 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-indigo-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
+                  className="glass-card rounded-2xl p-3.5 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-indigo-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
                 >
                   <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-purple-950 text-indigo-700 dark:text-purple-400">
                     <Github className="w-4 h-4" />
@@ -226,7 +226,26 @@ export const Contact: React.FC<ContactProps> = ({ openResumeModal }) => {
                     <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-purple-400 transition-colors">
                       GitHub
                     </span>
-                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block">@Giridhar0702</span>
+                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block truncate">Giridhar0702</span>
+                  </div>
+                </a>
+
+                <a
+                  href={PERSONAL_INFO.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card rounded-2xl p-3.5 border border-slate-200 dark:border-slate-800 flex items-center gap-3 hover:border-amber-500/50 group shadow-sm bg-white dark:bg-slate-900/70"
+                >
+                  <div className="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a4.994 4.994 0 0 0-3.85-1.472c-1.387 0-2.697.553-3.67 1.526l-4.319 4.381A5.153 5.153 0 0 0 2.213 14.3c0 1.387.553 2.697 1.526 3.67l4.332 4.363c.973.973 2.283 1.526 3.67 1.526s2.697-.553 3.67-1.526l2.609-2.607c.514-.514.496-1.365-.039-1.901-.535-.535-1.386-.552-1.9-.038zM20.811 13.01H10.666c-.702 0-1.27.568-1.27 1.27s.568 1.27 1.27 1.27h10.145c.702 0 1.27-.568 1.27-1.27s-.568-1.27-1.27-1.27z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                      LeetCode
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 block truncate">Problems</span>
                   </div>
                 </a>
               </div>

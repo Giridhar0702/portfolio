@@ -78,6 +78,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 <div>Phone: {PERSONAL_INFO.formattedPhone}</div>
                 <div>GitHub: github.com/Giridhar0702</div>
                 <div>LinkedIn: linkedin.com/in/giridhar-s-k-</div>
+                <div>LeetCode: leetcode.com/u/giridharsaravanakumar07/</div>
               </div>
             </div>
 
